@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation"
+    app:startDestination="@id/setupFragment">
+
+    <fragment
+        android:id="@+id/setupFragment"
+        android:name="com.example.dummyproject.SetupFragment"
+        android:label="fragment_setup"
+        tools:layout="@layout/fragment_setup" >
+        <action
+            android:id="@+id/nav_to_difficultyFragment"
+            app:destination="@id/difficultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.dummyproject.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" />
+    <fragment
+        android:id="@+id/difficultFragment"
+        android:name="com.example.dummyproject.DifficultFragment"
+        android:label="fragment_difficult"
+        tools:layout="@layout/fragment_difficult" >
+        <action
+            android:id="@+id/nav_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+</navigation>
